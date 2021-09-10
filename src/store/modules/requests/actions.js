@@ -5,7 +5,7 @@ export default {
       message: payload.message
     };
     const response = await fetch(
-      `https://coachfinder-80671-default-rtdb.firebaseio.com/requests/${payload.coachId}.json`,
+      `https://coachfinder-b3854-default-rtdb.firebaseio.com/requests/${payload.coachId}.json`,
       {
         method: 'POST',
         body: JSON.stringify(newRequest)
@@ -30,7 +30,7 @@ export default {
     const coachId = context.rootGetters.userId;
     const token = context.rootGetters.token;
     const response = await fetch(
-      `https://coachfinder-80671-default-rtdb.firebaseio.com/requests/${coachId}.json?auth=` +
+      `https://coachfinder-b3854-default-rtdb.firebaseio.com/requests/${coachId}.json?auth=` +
         token
     );
     const responseData = await response.json();
